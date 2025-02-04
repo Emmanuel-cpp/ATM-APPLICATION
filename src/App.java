@@ -56,8 +56,11 @@ public class App {
                         System.out.println("YOU HAVE SELECTED CHECK BALANCE");
                         break;
                     case 4:
-                        System.out.println("YOU HAVE SELECTED TO EXIT");
+                        System.out.println("YOU HAVE SELECTED TO VIEW STATEMENT");
                         break;
+                    case 5:
+                        System.out.println("YOU HAVE SELECTED TO EXIT");
+                        break;    
                     default:
                         break;
                 }
@@ -88,6 +91,7 @@ public class App {
         System.out.println("1. WITHDRAW");
         System.out.println("2. DEPOSIT");
         System.out.println("3. CHECK BALANCE");
-        System.out.println("4. EXIT");
+        System.out.println("4. VIEW STATEMENT");
+        System.out.println("5. EXIT");
     }
 }
