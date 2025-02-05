@@ -2,6 +2,7 @@
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
+        ATMOperations operation = new ATMOps_Implementaion();
         System.out.println("==============  WELCOME TO EMMANUEL'S ATM INTERFACE SYSTEM =============");
         Scanner data = new Scanner(System.in);
         System.out.println("PLEASE REGISTER BELOW");
@@ -29,7 +30,7 @@ public class App {
         else{
             System.out.println("PLEASE ENSURE PASSWORD CONTAINS 5 DIGITS ");
         }
-       
+        //viewDetails(reg_name,phone,account_number);
         //LOGIN PART
         System.out.println("YOU CAN NOW LOGIN");
         System.out.print("Enter Account Number: ");
@@ -40,6 +41,7 @@ public class App {
      
         if(loginAccount==account_number){
             if(login_password==pass1){
+                while(true){
                 System.out.println("=======================================================================");
                 System.out.println("WELCOME "+reg_name.toUpperCase());
                 menu();
@@ -48,22 +50,33 @@ public class App {
                 switch (option) {
                     case 1:
                         System.out.println("YOU HAVE SELECTED TO WITHDRAW");
+                        System.out.print("ENTER AMOUNT TO WITHDRAW: ");
+                        double user_withdraw = data.nextDouble();
+                        operation.withDraw(user_withdraw);
                         break;
                     case 2:
                         System.out.println("YOU HAVE SELECTED TO DEPOSIT");
+                        System.out.print("ENTER AMOUNT TO DEPOSIT: ");
+                        double user_deposit = data.nextDouble();
+                        operation.deposit(user_deposit);
                         break;
                     case 3:
-                        System.out.println("YOU HAVE SELECTED CHECK BALANCE");
+                        operation.checkBalance();
                         break;
                     case 4:
                         System.out.println("YOU HAVE SELECTED TO VIEW STATEMENT");
+                        operation.viewStatement();
                         break;
                     case 5:
                         System.out.println("YOU HAVE SELECTED TO EXIT");
-                        break;    
+                        System.out.println("PLEASE COLLECT YOUR ATM CARD");
+                        System.out.println("THANK YOU FOR USING OUR ATM PLEASE CALL AGAIN NEXT TIME");
+                        return;
+                          
                     default:
                         break;
                 }
+            }
             }
             else{
                 System.out.println("PLEASE ENSURE YOU ENTER THE CORRECT PASSWORD");

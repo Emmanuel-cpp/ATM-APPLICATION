@@ -17,16 +17,11 @@ public class ATM {
     public double getWithDrawAmount(){
         return withDrawAmount;
     }
-    //GETTER AND SETRER FOR DEPOSIT AMOUNT
-    public void getDeposit(double depositAmount){
+    //GETTER AND SETTER FOR DEPOSIT AMOUNT
+    public void setDeposit(double depositAmount){
         this.depositAmount=depositAmount;
     }
     public double getDeposit(){
         return depositAmount;
     }
-
-
-
-    
-
 }
