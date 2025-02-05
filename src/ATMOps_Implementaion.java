@@ -7,9 +7,7 @@ public class ATMOps_Implementaion implements ATMOperations{
             atm.setBalance(atm.getBalance()-withDrawAmount);
             checkBalance();
         }
-        else if(withDrawAmount<0){
-            System.out.println("PLEASE ENTER A VALID AMOUNT");
-        }
+    
         else{
             System.out.println("Insufficient Funds");
         }
