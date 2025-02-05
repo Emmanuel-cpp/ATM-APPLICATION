@@ -87,7 +87,6 @@ public class App {
         }
         data.close();
     }
-
     //FUNCTION TO CONFIRM DETAILS
     public static void viewDetails(String name,String phone,int account_number){
         System.out.println("===================================================================");
@@ -98,7 +97,6 @@ public class App {
         System.out.println("ACCOUNT NUMBER: "+account_number);
         System.out.println("=====================================================================");
     }
-       
     //MAIN MENU METHOD
     public static void menu(){
         System.out.println("1. WITHDRAW");
